@@ -4,7 +4,7 @@
 		<title>Fancify Shamcify</title>
 
 		<!-- link to your script file here -->
-		
+		<script src="fancifymytext.js" defer></script>
 		
 	</head>
 
@@ -15,14 +15,15 @@
 		<!-- Your UI controls go here -->
 		<fieldset>
 			<legend>Text</legend>
-			<textarea rows="4" cols="30"></textarea>
+			<textarea id="user-text" rows="4" cols="30"></textarea>
 		</fieldset>
 
 		<fieldset>
 			<legend>Fancify</legend>
-			<button>Bigger!</button><br>
-			<input type="radio" name="fanciness" value="fancy">FancyShmancy<br>
-			<input type="radio" name="fanciness" value="boring">BoringBetty
+			<button type="button" id="bigger-btn" onclick="makeTextBigger()">Bigger!</button><br>
+			<label><input type="radio" id="fancy-radio" name="fanciness" value="fancy" onchange="toggleFanciness()">FancyShmancy</label><br>
+			<label><input type="radio" id="boring-radio" name="fanciness" value="boring" onchange="toggleFanciness()">BoringBetty</label><br>
+			<button type="button" id="moo-btn" onclick="addMoo()">Moo</button>
 		</fieldset>
 		
 	</body>
